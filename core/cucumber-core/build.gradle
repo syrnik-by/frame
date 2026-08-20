@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    api project(":core:spring-core")
+    api "io.qameta.allure:allure-cucumber7-jvm:${allureVersion}"
+    api "io.cucumber:cucumber-spring:${cucumberVersion}"
+    api "io.cucumber:cucumber-java:${cucumberVersion}"
+    api "io.cucumber:cucumber-junit:${cucumberVersion}"
+    api "io.cucumber:cucumber-junit-platform-engine:${cucumberVersion}"
+    api (platform("io.cucumber:cucumber-bom:${cucumberVersion}"))
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@cucumber"
+    }
+}

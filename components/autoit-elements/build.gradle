@@ -1,0 +1,20 @@
+dependencies {
+    api project(":core:cucumber-ui-core")
+    api project(":components:autoit-junit")
+
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@AutoItElements'
+    }
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@AutoItElements"
+    }
+}

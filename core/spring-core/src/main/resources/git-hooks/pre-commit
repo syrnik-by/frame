@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+echo 'Pre-commit hook executed...'
+echo 'Check branch name...'
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+valid_branch_regex="(^r\/\d{1,3}\.\d{1,3}$)|(^(f|r|bug)\/[a-zA-Z]{2,8}-[0-9]{1,6}(-[a-zA-Z0-9_-]+)?$)"
+branch_error_message='
+********************************
+** Invalid branch name        **
+** Examples:                  **
+** f/ATTDD-12345-feature_name **
+** bug/ATTDD-12345-fix_name   **
+** r/3.12                     **
+********************************
+'
+if [[ ! $local_branch =~ $valid_branch_regex ]]
+then
+  echo "$branch_error_message"
+  exit 1
+fi
+echo 'Check branch complete...'
+
+echo 'Check project compilation...'
+compilation_error_message='
+*************************************************
+** Build failed                                **
+** Execute "gradle clean build" before commit **
+*************************************************
+'
+
+sh gradle clean build -x test > /dev/null 2>&1
+if [ ! $? -eq 0 ]
+then
+  echo "$compilation_error_message"
+  exit 1
+fi
+echo 'Compilation complete...'
+exit 0

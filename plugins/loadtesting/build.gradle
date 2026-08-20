@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    api project(":plugins:test-info-container")
+    api project(":components:web-elements")
+    api project(":components:http-steps")
+    api project(":plugins:proxy")
+
+    implementation "ru.psb.testit:testit-api-client:1.0.0"
+    implementation "ru.psb.testit:testit-java-commons:1.2.4.9-SNAPSHOT"
+    implementation 'com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:2.13.1'
+
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            pom.withXml {
+                Node pomNode = asNode()
+                pomNode.dependencies.'*'.findAll() {
+                    it.groupId.text().contains('components')
+                            || it.groupId.text().contains('core')
+                }.each() {
+                    it.parent().remove(it)
+                }
+            }
+            from components.java
+        }
+    }
+}

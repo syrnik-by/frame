@@ -1,0 +1,101 @@
+dependencies {
+    api project(":core:cucumber-ui-core")
+    api project(":components:web-junit")
+
+    api "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
+    testImplementation("com.fasterxml.jackson.core:jackson-databind") {
+           version {
+               strictly("${jacksonVersion}")
+           }
+    }
+    testImplementation "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:${jacksonVersion}"
+    testImplementation "org.junit.platform:junit-platform-suite:${jUnitEngineVersion}"
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@webElemElements'
+    }
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        useJUnitPlatform(){
+            excludeTags("@webElemElements")
+            excludeTags("@webElemJunit")
+            excludeTags("@junit")
+        }
+        systemProperties["cucumber.filter.tags"] = defaultCucumberTags
+    }
+}
+
+configurations {
+    all {
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+    }
+}
+
+task cucumberParallel(type: Test) {
+    doFirst {
+        useJUnitPlatform(){
+            //отключить запуск юнит-тестов
+            excludeTags("@webElemElements")
+            excludeTags("@webElemJunit")
+            excludeTags("@junit")
+        }
+        testLogging.showStandardStreams = true
+        testLogging.exceptionFormat = 'full'
+        def threads = 4
+        maxParallelForks = threads
+        println("Setting maxParallelForks to $maxParallelForks")
+        systemProperties["cucumber.filter.tags"] = defaultCucumberTags//"@browser" //
+        systemProperties["cucumber.execution.parallel.enabled"]= true
+        systemProperty("cucumber.junit-platform.naming-strategy" , "long")
+        //параллельный запуск**
+        systemProperties["cucumber.execution.parallel.mode.default"] = "concurrent"
+        systemProperties["cucumber.execution.parallel.config.fixed.parallelism"] = threads
+        systemProperties["cucumber.execution.parallel.config.fixed.max-pool-size"] = threads
+        systemProperties["cucumber.execution.parallel.config.strategy"] = "custom"
+        systemProperties["cucumber.execution.parallel.config.custom.class"] ="ru.autotestframework.web_elements.services.ParallelExecutionConfig"
+    }
+}
+
+task junit5e2e(type: Test) {
+    doFirst {
+        useJUnitPlatform() {
+            includeTags("@webElemJunit")
+        }
+        systemProperty("framework.junit", true)
+        systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
+    }
+}
+
+task junit5e2eParallel(type: Test) {
+    doFirst {
+        useJUnitPlatform() {
+            includeTags("@webElemJunit")
+        }
+        def threads = 1
+        maxParallelForks = threads
+        systemProperty("framework.junit", true)
+        systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
+
+        systemProperty 'junit.jupiter.execution.parallel.enabled', true
+        systemProperty 'junit.jupiter.execution.parallel.config.fixed.parallelism', 3
+        systemProperties["junit.jupiter.execution.parallel.mode.default"] = "concurrent"
+        systemProperties["junit.jupiter.execution.parallel.config.strategy"] = "custom"
+        systemProperties["junit.jupiter.execution.parallel.config.custom.class"] ="ru.autotestframework.web_elements.services.ParallelExecutionConfig"
+    }
+}
+
+tasks.withType(Test){
+    if (project.hasProperty('stand')){
+        environment "SPRING_PROFILES_ACTIVE", findProperty('stand').toString().toLowerCase()
+        systemProperty 'spring.profiles.active', findProperty('stand').toString().toLowerCase()
+    }
+}

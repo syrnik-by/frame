@@ -1,0 +1,32 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           targetNamespace="http://www.oorsprong.org/websamples.countryinfo"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://schemas.xmlsoap.org/soap/envelope/"
+               schemaLocation="http://schemas.xmlsoap.org/soap/envelope/"/>
+    <xs:element name="sISOCode" type="xs:string"/>
+    <xs:element name="sName" type="xs:string"/>
+    <xs:element name="tCurrency">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="web:sISOCode" xmlns:web="http://www.oorsprong.org/websamples.countryinfo"/>
+                <xs:element ref="web:sName" xmlns:web="http://www.oorsprong.org/websamples.countryinfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ListOfCurrenciesByNameResult">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="web:tCurrency" maxOccurs="unbounded" minOccurs="0"
+                            xmlns:web="http://www.oorsprong.org/websamples.countryinfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ListOfCurrenciesByNameResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="web:ListOfCurrenciesByNameResult"
+                            xmlns:web="http://www.oorsprong.org/websamples.countryinfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

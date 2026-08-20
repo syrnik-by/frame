@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Download File Via JavaScript</title>
+    <link rel="stylesheet" href="./downloads_files/testpages.css">
+</head>
+
+<body>
+
+<div class="page-body">
+
+    <h1>Download a File via JavaScript</h1>
+
+    <div class="explanation">
+        <p>Each of the following buttons implements a File Download in different ways using server calls from HTML.
+        </p>
+        <p class="inline-explanation">
+            Note: Not all of these will actually download the file, some may show the file in the browser.
+        </p>
+    </div>
+
+    <div class="centered">
+        <p id="status-display" data-lastfilename=""></p>
+
+
+        <p>
+            <a id="direct-download-a" download="" href="sample.pdf"><button class="styled-click-button" id="direct-download">Direct Link Download</button></a>
+        </p>
+
+        <p>
+            <a id="direct-download-window-a" download="" href="sample.pdf" target="_blank"><button class="styled-click-button" id="direct-download-window">Direct Link Download New Window</button></a>
+        </p>
+
+        <p>
+            <a id="server-download-a" download="" href="sample.pdf"><button class="styled-click-button" id="server-download">Server Download</button></a>
+        </p>
+
+        <p>
+            <a id="direct-link-a" href="sample.pdf"><button class="styled-click-button" id="direct-link">Direct Link</button></a>
+        </p>
+
+    </div>
+
+    <br>
+
+</div>
+
+</body></html>

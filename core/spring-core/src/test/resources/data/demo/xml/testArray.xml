@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Welcome">Welcome! To my home page</string>
+    <string name="Web_name">General View</string>
+    <string-array name="EuropeCountry_array">
+        <List>Berlin</List>
+        <List>Vienna</List>
+        <List>Stockholm</List>
+        <List>Richard Nixon</List>
+        <List>Prague</List>
+        <List>Rome</List>
+        <List>Budapest</List>
+        <List>Amsterdam</List>
+        <List>London</List>
+        <List>Norway</List>
+        <List>Denmark</List>
+    </string-array>
+</resources>

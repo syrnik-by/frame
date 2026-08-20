@@ -1,0 +1,25 @@
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    api project(":components:web-elements")
+
+    implementation 'org.apache.velocity:velocity:1.7'
+
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+}
+
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@JsonTestConverter'
+    }
+}
+

@@ -1,0 +1,17 @@
+subprojects {
+    apply plugin: 'maven-publish'
+    group 'ru.autotestframework.plugins'
+    version COMPONENTS_VERSION
+
+    publishing {
+        repositories {
+            maven {
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+                credentials {
+                    username = MVN_USER
+                    password = MVN_PASS
+                }
+            }
+        }
+    }
+}

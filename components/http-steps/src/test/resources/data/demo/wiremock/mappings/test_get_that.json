@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/get/that"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"content\": \"test GET that\"}",
+    "headers": {
+      "Content-Type": "text/json"
+    }
+  }
+}

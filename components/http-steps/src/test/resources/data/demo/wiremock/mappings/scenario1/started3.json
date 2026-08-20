@@ -1,0 +1,15 @@
+      {
+          "scenarioName": "To do list",
+          "requiredScenarioState": "SuccessfulAttempt",
+          "request": {
+              "method": "GET",
+              "url": "/get"
+          },
+          "response": {
+              "status": 200,
+              "body": "{\"content\": \"Hello world!\"}",
+			  "headers": {
+                 "Content-Type": "text/json"
+              }
+          }
+      }

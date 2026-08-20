@@ -1,0 +1,60 @@
+pluginManagement {
+    repositories {
+        maven {
+            url 'https://nexus-external.psbnk.msk.ru/repository/plugins.gradle.org-proxy/'
+        }
+        maven {
+            url 'https://nexus-internal.headoffice.psbank.local/repository/at-maven-group/'
+        }
+        maven {
+            url 'https://nexus-external.psbnk.msk.ru/repository/maven-public/'
+        }
+        maven {
+            url 'https://nexus-external.psbnk.msk.ru/repository/repo1.maven.org-proxy/'
+        }
+    }
+}
+
+rootProject.name = 'autotestframework'
+include 'components',
+        'components:debug-steps',
+        'components:ftp-steps',
+        'components:http-steps',
+        'components:sql-steps',
+        'components:sql',
+        'components:queue-steps',
+        'components:camunda-steps',
+        'components:web-elements',
+        'components:desktop-elements',
+        'components:screen-elements',
+        'components:java-elements',
+        'components:autoit-elements',
+        'components:autoit-junit',
+        'components:autoit-lib',
+        'components:web-junit',
+        'components:java-junit',
+        'components:screen-elements-junit',
+        'components:desktop-junit',
+        'components:orm-steps',
+        'components:document-steps',
+        'components:appium',
+        'components:appium-cucumber',
+        'core',
+        'core:cucumber-ui-core',
+        'core:cucumber-core',
+        'core:spring-core',
+        'core:ui-core',
+        'plugins',
+        'plugins:access-check-plugin',
+        'plugins:json-test-converter',
+        'plugins:test-info-container',
+        'plugins:allure-extension',
+        'plugins:loadtesting',
+        'plugins:proxy',
+        'plugins:junit5-retry',
+        'plugins:allure-restassured',
+        'plugins:test-info-container',
+        'plugins:allure-with-elements',
+        'plugins:test-dispatcher',
+        'plugins:test-listener'
+

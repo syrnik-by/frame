@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/get/this"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"content\": \"test GET this\"}",
+    "headers": {
+      "Content-Type": "text/json"
+    }
+  }
+}

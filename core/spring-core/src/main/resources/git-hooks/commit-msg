@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo 'Commit-message hook executed...'
+commit_regex='(merge)|(^([a-zA-Z]{2,6}-[0-9]{2,6}):(.{5,})$)'
+error_msg='
+************************************
+** Wrong format of commit message **
+** Example:                       **
+** ATTDD-3234: мой первый коммит  **
+************************************
+'
+
+if ! grep -iqE "${commit_regex}" "$1"
+then
+    echo "${error_msg}"
+    exit 1
+fi
+echo 'Commit message check complete...'
+exit 0

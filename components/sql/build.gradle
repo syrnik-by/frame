@@ -1,0 +1,22 @@
+dependencies {
+    api 'com.zaxxer:HikariCP:3.4.5'
+    api 'commons-dbutils:commons-dbutils:1.7'
+    api 'org.jooq:jooq:3.13.3'
+    api 'com.google.code.gson:gson:2.8.8'
+    api project(":core:spring-core")
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@SqlSteps'
+    }
+}
+spotless {
+    sql {
+        target fileTree('.') {
+            include '**/*.sql'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        dbeaver()
+    }
+}

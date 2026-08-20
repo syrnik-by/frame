@@ -1,0 +1,6 @@
+dependencies {
+    api project(":core:ui-core")
+    implementation "org.projectlombok:lombok:${lombokVersion}"
+    implementation "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
+    testImplementation(platform("io.qameta.allure:allure-bom:${allureVersion}"))
+}

@@ -1,0 +1,15 @@
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-params:${jUnitVersion}"
+    api project(":core:ui-core")
+    api project(":core:cucumber-core")
+}
+
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@cucumber'
+    }
+}
+

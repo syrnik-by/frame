@@ -1,0 +1,16 @@
+{
+  "scenarioName": "To do list",
+  "requiredScenarioState": "AfterFailedAttempt",
+  "newScenarioState": "SuccessfulAttempt",
+  "request": {
+    "method": "GET",
+    "url": "/get"
+  },
+  "response": {
+    "status": 404,
+    "body": "{\"content\": \"Not proccessed 2\"}",
+    "headers": {
+      "Content-Type": "text/json"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+version COMPONENTS_VERSION
+
+dependencies {
+    api "io.qameta.allure:allure-rest-assured:${allureVersion}"
+    implementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags("@Allure")
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

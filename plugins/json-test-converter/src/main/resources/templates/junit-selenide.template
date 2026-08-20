@@ -1,0 +1,28 @@
+package ${packageName};
+
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.*;
+import ru.autotestframework.ui_core.junit.BaseUITest;
+import ru.autotestframework.web_elements.elements.*;
+import ru.autotestframework.web_elements.elements.typified.TypifiedWebElement;
+
+#foreach($import in $pageImports)
+$import
+#end
+
+@Tag("${suiteName}")
+public class ${className} extends BaseUITest {
+
+#foreach($page in $allPages.entrySet())
+    ${page.key}Page ${page.value}Page = new ${page.key}Page();
+#end
+
+    @BeforeAll
+    public static void setup() {
+    }
+
+#foreach($method in $testMethods)
+$method
+
+#end
+}

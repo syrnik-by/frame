@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Table HTML Tag - JavaScript Created</title>
+    <link rel="stylesheet" href="./tablePage_files/testpages.css">
+    <script src="./tablePage_files/tables.js"></script>
+    <!-- HEAD -->
+
+</head>
+
+<body>
+
+<div class="page-body">
+
+    <h1>Dynamic HTML TABLE Tag</h1>
+
+    <div class="explanation">
+        <p>An example of an HTML Table populated by JavaScript
+        </p>
+    </div>
+
+    <div class="centered">
+
+        <div id="tablehere">
+
+            <style>
+                table{
+                    width: 100%;
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+                table th{
+                    background-color: gainsboro;
+                    font-weight: bold;
+                }
+                th, td {
+                    border: 1px solid black;
+                }
+            </style>
+
+            <table id="dynamictable"><caption>Dynamic Table</caption><tr><th>name</th><th>age</th></tr><tr><td>Bob</td><td>20</td></tr><tr><td>George</td><td>42</td></tr></table>
+
+        </div>
+
+        <details>
+            <summary>Table Data</summary>
+            <div>
+                <p><textarea id="jsondata"></textarea></p>
+                <p>Caption: <input type="text" id="caption"></p>
+                <p>Id: <input type="text" id="tableid"></p>
+                <button class="styled-click-button" id="refreshtable" onclick="createTable()">Refresh Table</button>
+            </div>
+        </details>
+
+
+    </div>
+
+
+    <div class="page-footer">
+    </div>
+
+</div>
+
+<script>
+
+    document.getElementById("jsondata").value = '[{"name" : "Bob", "age" : 20}, {"name": "George", "age" : 42}]';
+    document.getElementById("caption").value = "Dynamic Table";
+    document.getElementById("tableid").value = "dynamictable";
+
+    function createTable(){
+
+        myTable = new TableCreator();
+        myTable.setCaption(document.getElementById("caption").value);
+        myTable.setData(JSON.parse(document.getElementById("jsondata").value));
+        tableElement =  myTable.getTable({"id" : document.getElementById("tableid").value });
+
+        replaceTableWith(tableElement);
+    }
+
+    function replaceTableWith(aTableElement){
+        var currentTable = document.querySelector("table");
+        currentTable.parentElement.replaceChild( aTableElement, currentTable);
+    }
+
+    createTable();
+
+</script>
+
+
+</body></html>

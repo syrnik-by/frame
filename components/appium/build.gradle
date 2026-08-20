@@ -1,0 +1,27 @@
+dependencies {
+    api project(":core:ui-core")
+    api 'org.seleniumhq.selenium:selenium-java:4.1.1'
+    api 'org.seleniumhq.selenium:selenium-api:4.1.1'
+    api 'org.seleniumhq.selenium:selenium-remote-driver:4.1.1'
+    api 'org.seleniumhq.selenium:selenium-support:4.1.1'
+    api ('io.appium:java-client:8.0.0-beta'){
+        exclude group: 'org.seleniumhq.selenium', module: 'selenium-java'
+        exclude group: 'org.seleniumhq.selenium', module: 'selenium-api'
+        exclude group: 'org.seleniumhq.selenium', module: 'selenium-remote-driver'
+        exclude group: 'org.seleniumhq.selenium', module: 'selenium-support'
+    }
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@Mobile'
+    }
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@Mobile"
+    }
+}

@@ -1,0 +1,33 @@
+subprojects {
+    apply plugin: 'maven-publish'
+    apply plugin: 'java-library'
+    group 'ru.autotestframework.core'
+    version UI_CORE_VERSION
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+            }
+        }
+        repositories {
+            maven {
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+                credentials {
+                    username = MVN_USER
+                    password = MVN_PASS
+                }
+            }
+        }
+    }
+
+    dependencies {
+        api('org.springframework.boot:spring-boot-starter-test:2.6.3')
+                {
+                    exclude group: 'org.junit.platform'
+                    exclude group: 'org.junit'
+                    exclude module: 'junit-jupiter-engine'
+                    exclude module: 'junit-jupiter-params'
+                }
+    }
+}

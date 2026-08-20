@@ -1,0 +1,18 @@
+dependencies {
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+    api project(":core:spring-core")
+    api("com.codeborne:selenide:6.2.1") {
+        exclude group: 'com.fasterxml.jackson.core'
+    }
+    api "io.qameta.allure:allure-junit5:${allureVersion}"
+    testImplementation project(":components:web-elements")
+    testImplementation project(":components:desktop-elements")
+    testImplementation project(":components:screen-elements")
+
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@UiCore'
+    }
+}

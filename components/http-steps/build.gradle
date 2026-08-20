@@ -1,0 +1,33 @@
+dependencies {
+    api "io.rest-assured:rest-assured:${restAssuredVersion}"
+    api("io.rest-assured:json-schema-validator:${restAssuredVersion}"){
+        exclude group: 'com.fasterxml.jackson.core'
+    }
+    implementation("com.fasterxml.jackson.core:jackson-databind") {
+        version {
+            strictly("${jacksonVersion}")
+        }
+    }
+    api "io.qameta.allure:allure-rest-assured:${allureVersion}"
+    api project(":core:cucumber-core")
+
+    //workaround to add excluded deps to test
+    testImplementation('com.github.tomakehurst:wiremock:2.27.2')
+    api ('com.github.tomakehurst:wiremock:2.27.2') {
+        exclude group: 'com.fasterxml.jackson.core'
+        exclude group: 'org.eclipse.jetty'
+        exclude group: 'javax.servlet'
+    }
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@Demo or @WiremockDemo"
+    }
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@HttpSteps'
+    }
+}

@@ -1,0 +1,26 @@
+dependencies {
+    api project(":core:cucumber-ui-core")
+    api project(":components:screen-elements-junit")
+
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+
+    configurations {
+        all*.exclude module : 'spring-boot-starter-logging'
+        all*.exclude module : 'logback-classic'
+    }
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@ScreenElements'
+    }
+    enabled(true)
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@screenTesting and not @Skip"
+    }
+}

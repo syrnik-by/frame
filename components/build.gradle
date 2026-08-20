@@ -1,0 +1,47 @@
+plugins {
+    id "io.qameta.allure" version "2.9.3"
+    id "ru.iopump.qa.allure" version "0.1.2"
+    id "io.qameta.allure-download" version "2.9.3"
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+    apply plugin: 'io.qameta.allure'
+    apply plugin: 'ru.iopump.qa.allure'
+    apply plugin: "io.qameta.allure-download"
+
+    group 'ru.autotestframework.components'
+    version COMPONENTS_VERSION
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+            }
+        }
+        repositories {
+            maven {
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+                credentials {
+                    username = MVN_USER
+                    password = MVN_PASS
+                }
+            }
+        }
+        allureServer {
+            relativeResultDir = 'build/allure-results'
+        }
+    }
+
+    allureReport{
+        dependsOn.clear()
+//        systemProperties("allureHome", this.rootDir)
+    }
+    allureServe{
+        dependsOn.clear()
+    }
+
+}
+
+

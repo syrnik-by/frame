@@ -1,0 +1,13 @@
+dependencies {
+    api "io.rest-assured:rest-assured:${restAssuredVersion}"
+    api 'commons-net:commons-net:3.7.2'
+    api project(":core:cucumber-core")
+
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@FtpDemo'
+    }
+}

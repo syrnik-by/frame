@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+version COMPONENTS_VERSION
+
+dependencies {
+    api "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}"
+    api "org.junit.platform:junit-platform-launcher:${jUnitEngineVersion}"
+    implementation 'org.slf4j:slf4j-api:1.7.33'
+}
+
+test {
+    doFirst {
+        systemProperties["junit.retry.allTests"] = true //пытаемся перезапускать все упавшие тесты
+        systemProperties["junit.retry.attempts"] = 2 // число реранов для всех тестов
+
+        systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
+        useJUnitPlatform()
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

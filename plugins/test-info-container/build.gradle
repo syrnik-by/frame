@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+version COMPONENTS_VERSION
+
+dependencies {
+    api project(":core:cucumber-core")
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@TestInfo'}
+}
+dependencies {
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+}
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            pom.withXml {
+                Node pomNode = asNode()
+                pomNode.dependencies.'*'.findAll() {
+                    it.groupId.text().contains('components')
+                            || it.groupId.text().contains('core')
+                }.each() {
+                    it.parent().remove(it)
+                }
+            }
+            from components.java
+        }
+    }
+}

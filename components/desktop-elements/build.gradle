@@ -1,0 +1,20 @@
+dependencies {
+    api project(":core:cucumber-ui-core")
+    api project(":components:desktop-junit")
+
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@DesktopElements'
+    }
+    systemProperty("framework.junit", true)
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@desktopTesting and not @Skip"
+    }
+}

@@ -1,0 +1,11 @@
+dependencies {
+    api "io.rest-assured:rest-assured:${restAssuredVersion}"
+    api 'com.github.tomakehurst:wiremock-jre8-standalone:2.31.0'
+    api project(":core:cucumber-core")
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@CamundaDemo'
+    }
+}

@@ -1,0 +1,13 @@
+dependencies {
+    api 'org.apache.kafka:kafka-clients:3.1.0'
+    api "org.springframework.kafka:spring-kafka:${kafkaVersion}"
+    api 'com.rabbitmq:amqp-client:5.10.0'
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+    api project(":core:cucumber-core")
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@QueueDemo'
+    }
+}

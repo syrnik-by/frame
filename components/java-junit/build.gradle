@@ -1,0 +1,16 @@
+def JAVA_DRIVER_VERSION = '5.4.0.0'
+
+dependencies {
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+    api project(":core:ui-core")
+    api "com.jaliansystems:marathon-java-agent:${JAVA_DRIVER_VERSION}"
+    api "com.jaliansystems:marathon-java-driver:${JAVA_DRIVER_VERSION}"
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@JavaElements'
+    }
+}

@@ -1,0 +1,22 @@
+dependencies {
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+    testImplementation 'com.jgoodies:forms:1.2.1'
+    api project(":core:cucumber-ui-core")
+    api project(":components:java-junit")
+
+}
+
+version UI_CORE_VERSION
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@JavaElements'
+    }
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        systemProperty("java.awt.headless", "false")
+        environment "cucumber.filter.tags", "@javaTesting"
+    }
+}

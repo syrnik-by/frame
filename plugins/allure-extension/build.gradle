@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+version COMPONENTS_VERSION
+
+dependencies {
+    api project(":core:cucumber-core")
+    api project(":plugins:test-info-container")
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags("@Allure")
+    }
+}
+dependencies {
+    testImplementation("org.mockito:mockito-inline:3.6.28")
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

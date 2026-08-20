@@ -1,0 +1,7 @@
+# language: ru
+@Generated
+Функционал: ${testSuite.suiteName}
+
+#foreach($scenario in $scenarios)
+${scenario}
+#end

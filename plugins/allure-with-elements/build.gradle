@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+version COMPONENTS_VERSION
+
+dependencies {
+    api project(":core:ui-core")
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+task componentTesting(type: Test) {
+    useJUnitPlatform()
+}

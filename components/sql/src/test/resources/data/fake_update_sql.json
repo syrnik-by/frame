@@ -1,0 +1,16 @@
+[
+  {
+    "request": "^UPDATE qq",
+    "response": [
+      "log message 1",
+      "log message 2"
+    ]
+  },
+  {
+    "request": "^UPDATE aa",
+    "response": [
+      "log message 3",
+      "log message 4"
+    ]
+  }
+]

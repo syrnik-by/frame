@@ -1,0 +1,48 @@
+[
+  {
+    "request": "FROM TABLE QQ",
+    "response": [
+      {
+        "param1": {
+          "field1": 1,
+          "field2": true,
+          "field3": "string1"
+        },
+        "param2": {
+          "field1": 2,
+          "field2": false,
+          "field3": "string2"
+        },
+        "param3": true,
+        "param4": 100
+      }
+    ]
+  },
+  {
+    "request": "from table aa",
+    "response": [
+      {
+        "param1": {
+          "field1": 217,
+          "field2": true,
+          "field3": "string18"
+        },
+        "param2": {
+          "field1": 316,
+          "field2": true,
+          "field3": "string27"
+        }
+      }
+    ]
+  },
+  {
+    "request": "from table sql1",
+    "response": [
+      {
+        "param": true,
+        "param1": 100,
+        "param2": "test"
+      }
+    ]
+  }
+]

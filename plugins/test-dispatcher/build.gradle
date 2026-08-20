@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+version COMPONENTS_VERSION
+
+dependencies {
+    implementation("org.apache.activemq:artemis-jms-client:2.19.1")
+    implementation("org.apache.activemq:artemis-jms-server:2.19.1")
+    implementation("org.apache.activemq:artemis-server:2.19.1")
+    implementation("org.apache.activemq:artemis-core-client:2.19.1")
+    implementation("org.awaitility:awaitility:4.1.0")
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
+
+    api 'org.slf4j:slf4j-simple:1.7.5'
+    api 'org.slf4j:slf4j-api:1.7.5'
+}
+
+task executeParallel(type:JavaExec) {
+    main = "ru.psb.autotestframework.testdispatcher.Launcher"
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperties 'features' : System.getProperty('features')
+    systemProperties 'hosts' : System.getProperty('hosts')
+}
+
+task shutdownListeners(type:JavaExec) {
+    main = "ru.psb.autotestframework.testdispatcher.ShutDownNodes"
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperties 'hosts' : System.getProperty('hosts')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

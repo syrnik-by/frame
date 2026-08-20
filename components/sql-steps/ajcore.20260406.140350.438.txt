@@ -1,0 +1,272 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.6 built on Tuesday Jul 21, 2020 at 13:30:08 PDT
+---- Dump Properties ---
+Dump file: ajcore.20260406.140350.438.txt
+Dump reason: abort
+Dump on exception: true
+Dump at exit condition: abort
+---- System Properties ---
+awt.toolkit=sun.awt.X11.XToolkit
+java.specification.version=11
+sun.cpu.isalist=
+sun.jnu.encoding=UTF-8
+org.gradle.test.worker=54
+java.class.path=/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/7.3.3/workerMain/gradle-worker.jar:/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/components/sql-steps/build/classes/java/test:/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/components/sql-steps/build/resources/test:/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/components/sql-steps/build/classes/java/main:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/3.4.5/aa1a2c00aae8e4ba8308e19940711bb9525b103d/HikariCP-3.4.5.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/commons-dbutils/commons-dbutils/1.7/a2d6e515aa87e5d38f6b3003e70b13c1b1f19ca0/commons-dbutils-1.7.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.jooq/jooq/3.13.3/a2f1378d2fdd2922c94970ff4458c1a8569af0d4/jooq-3.13.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.8/431fc3cbc0ff81abdbfde070062741089c3ba874/gson-2.8.8.jar:/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/core/cucumber-core/build/libs/cucumber-core-3.3.jar:/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/core/spring-core/build/libs/spring-core-3.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.22/9c08ea24c6eb714e2d6170e8122c069a0ba9aacf/lombok-1.18.22.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-junit-platform-engine/7.2.3/ba7f83b5208637855eea935afeca6eb3a978f15c/cucumber-junit-platform-engine-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit5/2.17.3/d0d4fc8eb33151233aa8367916bb49448f9a2daa/allure-junit5-2.17.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit-platform/2.17.3/5e3281d6afc42889dd408f7a666b8331ade6b743/allure-junit-platform-2.17.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.8.2/c334fcee82b81311ab5c426ec2d52d467c8d0b28/junit-platform-launcher-1.8.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.8.2/b737de09f19864bd136805c84df7999a142fec29/junit-platform-engine-1.8.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.8.2/32c8b8617c1342376fd5af2053da6410d8866861/junit-platform-commons-1.8.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.8.2/c598b4328d2f397194d11df3b1648d68d7d990e3/junit-jupiter-engine-5.8.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/2.6.3/1ac659fc8c6d7285218b7ff79d67b87736f4ddf2/spring-boot-starter-test-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.8.2/5a817b1e63f1217e5c586090c45e681281f097ad/junit-jupiter-5.8.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/4.0.0/b76de25bd6e5d8f7924d0536729c0076e37e9396/mockito-junit-jupiter-4.0.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.8.2/4c21029217adf07e4c0d0c5e192b6bf610c94bdc/junit-jupiter-api-5.8.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.20/b8df472b31e1f17c232d2ad78ceb1c84e00c641b/commons-compress-1.20.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.0.0/f5195e0c4a45716bbd2d1d29173adbd148acce3a/mockito-core-4.0.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.2/ec0d988a6e0270f4737a4ae4a03f1a48aaa7cc89/byte-buddy-1.12.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-spring/7.2.3/84a78587fbf7cefd179d39db7ccccc595befc21d/cucumber-spring-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-java/7.2.3/7535ff681679ef3127eabf94b1820f0441246f2b/cucumber-java-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-junit/7.2.3/c9e627be1dc616160ffb681b2606e7b00094aa29/cucumber-junit-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/7.2.3/105a1ca71a2603bbfcc7496bdf5dd2bf94d0b6c6/cucumber-core-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-expressions/15.0.1/175b84bb7d7751e31f431c489c0017a794b7221a/cucumber-expressions-15.0.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/datatable/7.2.3/26a52db5a8e2d5ef7d11de498302a8c092b0665d/datatable-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-gherkin-messages/7.2.3/f3c63b435496b720f701b65013c714767316555a/cucumber-gherkin-messages-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-gherkin/7.2.3/3a1269464661291f561a423278103807a2e9d541/cucumber-gherkin-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-plugin/7.2.3/eb9eb96751510b0307a2d900ec5b914cbb7c4c34/cucumber-plugin-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/docstring/7.2.3/6fc1a8a4316e7427ab36894c0d7b31b8d29d6198/docstring-7.2.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.6.0/67f565b424f7903a12d4f5b9361b11462ecacdac/json-path-2.6.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.4.7/8d7f4c1530c07c54930935f3da85f48b83b3c109/json-smart-2.4.7.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.4.7/3970cfc505e6657ca60f3aa57c849f6043000d7a/accessors-smart-2.4.7.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.1/a99500cf6eea30535eeac6be73899d048f8d12a8/asm-9.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.9/ba6ac8c2807490944a0a27f6f8e68fb5ed2e80e2/commons-text-1.9.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc10/19.13.0.0.1/aa312fb842786027136d74f9a43c388194e55fd4/ojdbc10-19.13.0.0.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.microsoft.sqlserver/mssql-jdbc/8.4.1.jre8/b5ffea221217c051429a6d2af974ee7341765424/mssql-jdbc-8.4.1.jre8.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.2.19/85cb20fe8151b6d90900d5ae5cfe0ad7c3e8f921/postgresql-42.2.19.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-retry/1.6.1/c37e11363cd004b0e749db165075d8e2e9cf4023/resilience4j-retry-1.6.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-cucumber7-jvm/2.17.3/18959a4fa6846565640d6a88867a116f9f304e95/allure-cucumber7-jvm-2.17.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit4-aspect/2.13.9/47ac567c1d1035afb97488b226b35e0bfa56a6f5/allure-junit4-aspect-2.13.9.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit4/2.13.9/510854058f634e5ebc42eaea5289aa75d477e4b7/allure-junit4-2.13.9.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-test-filter/2.17.3/dc2ab198f2f78b39f637e84f88626c8834f79ba3/allure-test-filter-2.17.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-java-commons/2.17.3/998d8e1652615a200d345786b0346c18a0758217/allure-java-commons-2.17.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-core/1.6.1/bcacd39eeba8c1bfc8f598fc6bc109ec9973e2a7/resilience4j-core-1.6.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/2.6.3/1211af6e300c0584e01c7a9a75e585ac0aec6ea6/spring-boot-starter-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.6.3/86599127b1e69a6180014cbeed8297ba26e8c6aa/spring-boot-starter-logging-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.17.1/3619fd18278a1a895c1dca8c5be002768071a20e/log4j-to-slf4j-2.17.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.33/53fd89b530d41b8f6744c754de1c9b02e82f2d7/jul-to-slf4j-1.7.33.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.33/d375aa1b98d34d5ddf73a3f19eaad66e98975b12/slf4j-api-1.7.33.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/tag-expressions/4.1.0/68bc59a4cdbcdc9e8c5b288f660a16a9981a3c33/tag-expressions-4.1.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/gherkin/22.0.0/5cdf8f151d1d9213fb0e9cf2d920199aea483b5f/gherkin-22.0.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/html-formatter/17.0.0/7b80ba4032870ab180525e735b6fadd28242fb09/html-formatter-17.0.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/messages/17.1.1/ab72f05cc30e3d62e9930080f2978143dda043cb/messages-17.1.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.cucumber/ci-environment/8.1.0/b372b193e3bc4adcbf083de12601ba846822b934/ci-environment-8.1.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.6.3/c903465682a6cd69adbc83feb8e8bfa26c51e6ae/spring-boot-test-autoconfigure-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/2.6.3/93b38ba8d4f027a7eda8c28dbe8f77b712de1142/spring-boot-test-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.21.0/27a14d6d22c4e3d58f799fb2a5ca8eaf53e6942a/assertj-core-3.21.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/1820c0968dba3a11a1b30669bb1f01978a91dedc/hamcrest-2.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.5.0/6c9d5fe2f59da598d9aefc1cfc6528ff3cf32df3/jsonassert-1.5.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.3.15/1efef59ebbf51bc072d08c5854b1d5cbb1c29b65/spring-test-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.6.3/8bf96f63e9479b5a1c17d1fa05b149bb5ed050e2/spring-boot-autoconfigure-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.6.3/f1127e8a70ba7b9f12581e79ea963b739059bf55/spring-boot-2.6.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.3.15/80a12b7dcb3332fbd65c3649249fd35561ffc561/spring-context-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.3.15/195966e1f4260f89696e668856ebfd9a1bc76404/spring-aop-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.3.15/a88e2ccfe8b131bcff2e643b90d52f6d928e7369/spring-beans-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.3.15/362f36bbc4c4b46cc2e4f219df22d08945000c2/spring-expression-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.15/e813c2311465672d3089fc7be8dbbadb04e64d6b/spring-core-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-placeholders/2.7.0/78829a54bffbe77b90c6c30196048554906eecd0/xmlunit-placeholders-2.7.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.8.4/35be57989ca80eefa03161b211630e319a8f36c6/xmlunit-core-2.8.4.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/5.3.6/69b5017aa748f6832798079ece6a018cb25e7f15/spring-aspects-5.3.6.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.hibernate.validator/hibernate-validator/6.1.6.Final/2fee0c38f3a8fae0aeb0f1f042b87270bd6b0cb3/hibernate-validator-6.1.6.Final.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/31.0.1-jre/119ea2b2bc205b138974d351777b20f02b92704b/guava-31.0.1-jre.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/net.datafaker/datafaker/1.1.0/8f7ea44588debf522fe25609fe3f1e658e167af6/datafaker-1.1.0.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/javax.mail/mail/1.4.7/9add058589d5d85adeb625859bf2c5eeaaedf12d/mail-1.4.7.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.11.19/25c27513103bd4a166778b20a0be0c84dc5364f6/byte-buddy-agent-1.11.19.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.2/7fadf57620c8b8abdf7519533e5527367cb51f09/objenesis-3.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.15/88da960b4fcbd28621aea8b9911976adc06afce4/spring-jcl-5.3.15.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.6/ee3b73aa16df35179255f17354d9dfd8e7822835/aspectjweaver-1.9.6.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.2/5eacc6522521f7eacb081f95cee1e231648461e7/jakarta.validation-api-2.0.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.2.Final/3789d00e859632e6c6206adc0c71625559e6e3b0/jboss-logging-3.3.2.Final.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.4/3d5f48f10bbe4eb7bd862f10c0583be2e0053c6/classmate-1.3.4.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.7.1/458d9042f7aa6fa9a634df902b37f544e15aacac/error_prone_annotations-2.7.1.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/com.github.mifmif/generex/1.0.2/b378f873b4e8d7616c3d920e2132cb1c87679600/generex-1.0.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.10.2/dfd5101b17da36c32ae024b984e0b72712f01a35/vavr-0.10.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-model/2.17.3/19ee8cd4f0eaa6e2ae53e04e7e31bfbff128e907/allure-model-2.17.3.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/dk.brics.automaton/automaton/1.11-8/6ebfa65eb431ff4b715a23be7a750cbc4cc96d0f/automaton-1.11-8.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.vavr/vavr-match/0.10.2/68f1af10052713fda01bfb1e5b831dcf6d826ab2/vavr-match-0.10.2.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.9.6/1651849d48659e5703adc2599e694bf67b8c3fc4/aspectjrt-1.9.6.jar:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.17.1/d771af8e336e372fb5399c99edabe0919aeaf5b2/log4j-api-2.17.1.jar
+java.vm.vendor=BellSoft
+sun.arch.data.model=64
+user.variant=
+java.vendor.url=https://bell-sw.com/
+user.timezone=Europe/Moscow
+os.name=Linux
+java.vm.specification.version=11
+user.country=RU
+sun.java.launcher=SUN_STANDARD
+sun.boot.library.path=/usr/lib/jvm/bellsoft-java11-amd64/lib
+sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 54'
+jdk.debug=release
+sun.cpu.endian=little
+allure.results.directory=/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/components/sql-steps/build/allure-results
+user.home=/home/syreyschikovae@headoffice.psbank.local
+user.language=ru
+java.specification.vendor=Oracle Corporation
+org.gradle.native=false
+java.version.date=2022-04-22
+java.home=/usr/lib/jvm/bellsoft-java11-amd64
+file.separator=/
+java.vm.compressedOopsMode=32-bit
+line.separator=
+
+java.specification.name=Java Platform API Specification
+java.vm.specification.vendor=Oracle Corporation
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=11.0.15.1+2-LTS
+user.name=syreyschikovae@headoffice.psbank.local
+path.separator=:
+os.version=6.1.124-1-generic
+java.runtime.name=OpenJDK Runtime Environment
+file.encoding=UTF-8
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vendor.url.bug=https://bell-sw.com/support
+java.io.tmpdir=/tmp
+java.version=11.0.15.1
+user.dir=/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/components/sql-steps
+os.arch=amd64
+java.vm.specification.name=Java Virtual Machine Specification
+java.awt.printerjob=sun.print.PSPrinterJob
+sun.os.patch.level=unknown
+org.gradle.internal.worker.tmpdir=/home/syreyschikovae@headoffice.psbank.local/Projects/autotest-framework/components/sql-steps/build/tmp/componentTesting/work
+java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+junit.jupiter.extensions.autodetection.enabled=true
+java.vm.info=mixed mode
+java.vendor=BellSoft
+java.vm.version=11.0.15.1+2-LTS
+sun.io.unicode.encoding=UnicodeLittle
+java.class.version=55.0
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+info AspectJ Weaver Version 1.9.6 built on Tuesday Jul 21, 2020 at 13:30:08 PDT
+info register classloader jdk.internal.loader.ClassLoaders$AppClassLoader@6a6824be
+info using configuration file:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit4-aspect/2.13.9/47ac567c1d1035afb97488b226b35e0bfa56a6f5/allure-junit4-aspect-2.13.9.jar!/META-INF/aop.xml
+info using configuration file:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/5.3.6/69b5017aa748f6832798079ece6a018cb25e7f15/spring-aspects-5.3.6.jar!/META-INF/aop.xml
+info using configuration file:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit-platform/2.17.3/5e3281d6afc42889dd408f7a666b8331ade6b743/allure-junit-platform-2.17.3.jar!/META-INF/aop-ajc.xml
+info using configuration file:/home/syreyschikovae@headoffice.psbank.local/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit4/2.13.9/510854058f634e5ebc42eaea5289aa75d477e4b7/allure-junit4-2.13.9.jar!/META-INF/aop-ajc.xml
+abort trouble in: 
+class org.springframework.boot.jdbc.DataSourceBuilder$OraclePoolDataSourceProperties extends org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties:
+  public Class getDataSourceInstanceType():
+                    LDC oracle.ucp.jdbc.PoolDataSourceImpl   (line 641)
+                    ARETURN
+  end public Class getDataSourceInstanceType()
+
+  void <init>():
+                    ALOAD_0     // Lorg/springframework/boot/jdbc/DataSourceBuilder$OraclePoolDataSourceProperties; this   (line 644)
+                    INVOKESPECIAL org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.<init> ()V
+                    ALOAD_0     // Lorg/springframework/boot/jdbc/DataSourceBuilder$OraclePoolDataSourceProperties; this   (line 645)
+                    GETSTATIC org.springframework.boot.jdbc.DataSourceBuilder$DataSourceProperty.URL Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;
+                    INVOKEDYNAMIC #0.get ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;
+                    INVOKEDYNAMIC #1.set ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;
+                    INVOKEVIRTUAL org.springframework.boot.jdbc.DataSourceBuilder$OraclePoolDataSourceProperties.add (Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;)V
+                    ALOAD_0     // Lorg/springframework/boot/jdbc/DataSourceBuilder$OraclePoolDataSourceProperties; this   (line 646)
+                    GETSTATIC org.springframework.boot.jdbc.DataSourceBuilder$DataSourceProperty.DRIVER_CLASS_NAME Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;
+                    INVOKEDYNAMIC #2.get ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;
+                    INVOKEDYNAMIC #3.set ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;
+                    INVOKEVIRTUAL org.springframework.boot.jdbc.DataSourceBuilder$OraclePoolDataSourceProperties.add (Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;)V
+                    ALOAD_0     // Lorg/springframework/boot/jdbc/DataSourceBuilder$OraclePoolDataSourceProperties; this   (line 648)
+                    GETSTATIC org.springframework.boot.jdbc.DataSourceBuilder$DataSourceProperty.USERNAME Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;
+                    INVOKEDYNAMIC #4.get ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;
+                    INVOKEDYNAMIC #5.set ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;
+                    INVOKEVIRTUAL org.springframework.boot.jdbc.DataSourceBuilder$OraclePoolDataSourceProperties.add (Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;)V
+                    ALOAD_0     // Lorg/springframework/boot/jdbc/DataSourceBuilder$OraclePoolDataSourceProperties; this   (line 649)
+                    GETSTATIC org.springframework.boot.jdbc.DataSourceBuilder$DataSourceProperty.PASSWORD Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;
+                    ACONST_NULL
+                    INVOKEDYNAMIC #6.set ()Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;
+                    INVOKEVIRTUAL org.springframework.boot.jdbc.DataSourceBuilder$OraclePoolDataSourceProperties.add (Lorg/springframework/boot/jdbc/DataSourceBuilder$DataSourceProperty;Lorg/springframework/boot/jdbc/DataSourceBuilder$Getter;Lorg/springframework/boot/jdbc/DataSourceBuilder$Setter;)V
+                    RETURN   (line 650)
+  end void <init>()
+
+end class org.springframework.boot.jdbc.DataSourceBuilder$OraclePoolDataSourceProperties
+ -- (IllegalStateException) org.aspectj.weaver.MissingResolvedTypeWithKnownSignature) (typeBindings={T=oracle.ucp.jdbc.PoolDataSource})
+org.aspectj.weaver.MissingResolvedTypeWithKnownSignature) (typeBindings={T=oracle.ucp.jdbc.PoolDataSource})
+java.lang.IllegalStateException: org.aspectj.weaver.MissingResolvedTypeWithKnownSignature) (typeBindings={T=oracle.ucp.jdbc.PoolDataSource})
+	at org.aspectj.weaver.BoundedReferenceType.parameterize(BoundedReferenceType.java:112)
+	at org.aspectj.weaver.ResolvedType.parameterize(ResolvedType.java:2549)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterize(ResolvedMemberImpl.java:898)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:790)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:743)
+	at org.aspectj.weaver.ReferenceType.getDeclaredMethods(ReferenceType.java:865)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:273)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:270)
+	at org.aspectj.weaver.Iterators$4$1.hasNext(Iterators.java:213)
+	at org.aspectj.weaver.Iterators$4.hasNext(Iterators.java:230)
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:642)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:320)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:56)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:56)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:113)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:158)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3328)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2704)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:483)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:103)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1712)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1656)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1421)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1195)
+	at org.aspectj.weaver.tools.WeavingAdaptor.getWovenBytes(WeavingAdaptor.java:551)
+	at org.aspectj.weaver.tools.WeavingAdaptor.weaveClass(WeavingAdaptor.java:387)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:116)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:51)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.getDeclaringClass0(Native Method)
+	at java.base/java.lang.Class.getDeclaringClass(Class.java:1471)
+	at java.base/sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl.<init>(ParameterizedTypeImpl.java:51)
+	at java.base/sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl.make(ParameterizedTypeImpl.java:93)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeParameterizedType(CoreReflectionFactory.java:105)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:140)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperclass(ClassRepository.java:104)
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperclass(ClassRepository.java:86)
+	at java.base/java.lang.Class.getGenericSuperclass(Class.java:949)
+	at org.springframework.core.ResolvableType.getSuperType(ResolvableType.java:471)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:456)
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1056)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.<init>(DataSourceBuilder.java:329)
+	at org.springframework.boot.jdbc.DataSourceBuilder$HikariDataSourceProperties.<init>(DataSourceBuilder.java:590)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.lookup(DataSourceBuilder.java:419)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.lookupPooled(DataSourceBuilder.java:386)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.forType(DataSourceBuilder.java:376)
+	at org.springframework.boot.jdbc.DataSourceBuilder$DataSourceProperties.forType(DataSourceBuilder.java:315)
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:170)
+	at ru.autotestframework.sql_steps.components.CucumberTypesDefinition.dataSource(CucumberTypesDefinition.java:86)
+	at ru.autotestframework.sql_steps.Tests.SqlStepsTests.checkCucumberTypesProceedingDiffDataSource(SqlStepsTests.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestMethod(InvocationInterceptor.java:118)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+

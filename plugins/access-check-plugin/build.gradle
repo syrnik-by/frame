@@ -1,0 +1,17 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'java'
+}
+
+dependencies {
+    api project(":core:spring-core")
+}
+
+gradlePlugin {
+    plugins.create('access-checker-plugin') {
+        id = 'access-checker-plugin'
+        group = 'ru.autotestframework.gradle-plugins'
+        implementationClass = 'ru.autotestframework.access_checker_plugin.AccessCheckPlugin'
+        description = 'Tasks for checking Access to Systems'
+    }
+}

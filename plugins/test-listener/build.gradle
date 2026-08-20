@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = "ru.psb.autotestframework.testlistener.Listener"
+
+version COMPONENTS_VERSION
+
+dependencies {
+    implementation project(':plugins:test-dispatcher')
+    implementation("org.apache.commons:commons-lang3:3.12.0")
+    implementation("org.awaitility:awaitility:4.1.0")
+    implementation("org.gradle:gradle-tooling-api:6.8")
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
+    api 'org.slf4j:slf4j-api:1.7.5'
+    api 'org.slf4j:slf4j-simple:1.7.5'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    doLast {
+        manifest {
+            attributes "Main-Class": "ru.autotestframework.testlistener.Listener"
+        }
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        from {
+            configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    api project(":components:appium")
+    api project(":core:cucumber-ui-core")
+}
+
+test {
+    useJUnitPlatform()
+}

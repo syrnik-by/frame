@@ -1,0 +1,174 @@
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dfile.encoding=UTF-8"
+  DISABLE_HOOKS_COPY: "true"
+  COMPUTE_VERSION: "TEMPORARY_VERSION-$CI_COMMIT_SHORT_SHA"
+  TEMPORARY_VERSION: "${COMPUTE_VERSION}"
+  DOCKER_AUTH_CONFIG: |
+    {
+      "auths": {
+        "nexus-internal:6003": {
+          "auth": "dG1wX2RvY2tlci1jdXN0b20tYXQtdXNlci1yb2xlOlRzZGhoNjNuYw=="
+        }
+      }
+    }
+
+image: nexus-internal:6003/usmpo/oassok/build-base-infra-images/automated-testing/jdk:0.0.1-80858116
+
+stages:
+  - prepare
+  - verify
+  - sonar
+  - publish
+  - .post
+
+# *************************************** templates
+.runner_template:
+  tags:
+    - kaniko
+
+.cucumber_template:
+  extends:
+    - .runner_template
+  stage: verify
+  needs: [ "build"]
+  only:
+    - merge_request
+  timeout: 15m
+
+.verify_template:
+  extends:
+    - .runner_template
+  stage: prepare
+  only:
+    - merge_request
+
+.proj_template:
+  stage: .post
+  only:
+    - master
+  variables:
+    FRAMEWORK_VERSION: "2.14"
+
+# *************************************** build
+
+build:
+  stage: prepare
+  extends:
+    - .verify_template
+  script:
+    - java -version
+    - gradle -x test -x cucumber -x cucumberParallel -x componentTesting -x junit5e2e  -x junit5e2eParallel build --info
+  only:
+    - merge_request
+  tags:
+    - kaniko
+
+# *************************************** sonar
+
+#code analyze and checkstyle:
+#  stage: sonar
+#  extends:
+#    - .verify_template
+#  needs: [ "build" ]
+#  script:
+#    #- chcp 65001 #dummy
+#    #- gradle --offline -x test sonarqube
+
+# *************************************** unit tests
+
+unitTesting:
+  stage: verify
+  extends:
+    - .verify_template
+  needs: [ "build" ]
+  script:
+    - gradle -x test -x cucumber componentTesting -info "-Pstand=vm"
+
+# *************************************** cucumber tests
+
+web-element-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:web-elements:cucumber -info "-Pstand=vm"
+
+junit-integration-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:web-elements:junit5e2e -info "-Pstand=vm"
+
+web-element-testing-prll:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:web-elements:cucumberParallel -info "-Pstand=vm"
+
+http-steps-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:http-steps:cucumber -info
+
+cucumber-core-steps-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :core:cucumber-core:cucumber -info
+
+sql-steps-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:sql-steps:cucumber -info
+
+debug-steps-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:debug-steps:cucumber -info
+
+orm-steps-testing:
+  stage: verify
+  extends:
+    - .cucumber_template
+  script:
+    - gradle :components:orm-steps:cucumber -info
+
+#screen-element-testing:
+#  extends:
+#    - .cucumber_template
+#  script:
+#    #- gradle --offline :components:screen-elements:cucumber
+
+# *************************************** deploy
+
+smgoz-testing:
+  extends:
+    - .proj_template
+  trigger:
+    project: automated-testing-technology/projects/sm-goz/proj-sm-goz-autotest
+    branch: develop
+
+retail-testing:
+  extends:
+    - .proj_template
+  trigger:
+    project: automated-testing-technology/projects/psb-retail/psb_retail_autotest_new
+    branch: develop
+
+deploy:
+  stage: publish
+  script:
+    - gradle -x test -x cucumber :components:build publish
+  only:
+    - master
+  tags:
+    - yanovskiyid

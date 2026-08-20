@@ -1,0 +1,184 @@
+plugins {
+    id 'org.sonarqube' version "${sonarVersion}" apply false
+    id 'com.diffplug.spotless' version "${spotlessVersion}" apply false
+}
+
+def currentFrameworkVersion = "3.3"
+
+def getModuleVersion(String defaultVersion) {
+    def propName = "tempVersion"
+    def props = getProperties()
+    if (props.containsKey(propName)) return props.get(propName)
+    return defaultVersion
+}
+
+ext {
+    // components versions
+    PROJECT_VERSION = getModuleVersion(currentFrameworkVersion)
+    PROJECT_DEPENDENCY_VERSION = getModuleVersion(currentFrameworkVersion)
+    COMPONENTS_VERSION = getModuleVersion(currentFrameworkVersion)
+    UI_CORE_VERSION = getModuleVersion(currentFrameworkVersion)
+
+    // repository
+    MVN_USER = System.getenv("MVN_USER") ?: mavenUsername
+    MVN_PASS = System.getenv("MVN_PASS") ?: mavenPassword
+
+    defaultCucumberTags = 'not (@Skip or @Demo)'
+}
+
+allprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'org.sonarqube'
+    apply plugin: 'checkstyle'
+    apply plugin: 'com.diffplug.spotless'
+
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+
+    tasks.withType(Test).configureEach {
+        group = 'verification'
+        reports.html.required = false
+        reports.junitXml.required = false
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.incremental = true
+    }
+
+    version PROJECT_VERSION
+
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = 'UTF-8'
+    javadoc.options.encoding = 'UTF-8'
+
+    repositories {
+        maven {
+            url atMavenGroupUrl
+        }
+        maven {
+            url mvnProxyUrl
+        }
+
+    }
+
+    dependencies {
+        testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
+
+        implementation "org.projectlombok:lombok:${lombokVersion}"
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+        testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+        configurations.configureEach {
+            exclude group: "com.fasterxml.jackson.module", module: "jackson-module-jakarta-xmlbind-annotations"
+        }
+
+        configurations {
+            implementation {
+                exclude group: 'com.github.jknack'
+                exclude group: 'org.yaml'
+
+                exclude group: 'org.checkerframework'
+                exclude group: 'com.sun.mail'
+                exclude group: 'com.sun.istack'
+
+                exclude group: 'javax.activation'
+                exclude group: 'javax.xml.bind'
+                exclude group: 'jakarta.annotation'
+                exclude group: 'org.mozilla'
+                exclude group: 'org.jvnet.staxex'
+                exclude group: 'org.glassfish.jaxb'
+                exclude group: 'org.ghost4j'
+            }
+            all {
+                exclude module: 'logback-core'
+                exclude module: 'logback-classic'
+            }
+        }
+
+        platform("com.fasterxml.jackson:jackson-bom") {
+            version {
+                strictly '2.13.1'
+            }
+        }
+
+        implementation("org.opentest4j:opentest4j"){
+            version {
+                strictly '1.2.0'
+            }
+        }
+
+        implementation("org.apache.commons:commons-compress"){
+            version {
+                strictly '1.20'
+            }
+        }
+
+        constraints {
+            platform("com.fasterxml.jackson:jackson-bom:2.13.1")
+            implementation('commons-codec:commons-codec:1.15')
+            implementation('commons-io:commons-io:2.11.0')
+            implementation('commons-logging:commons-io:1.2')
+            implementation('net.bytebuddy:byte-buddy:1.12.2')
+            implementation('org.apiguardian:apiguardian-api:1.1.2')
+            implementation('org.bouncycastle:bcprov-jdk15on:1.62')
+            implementation('org.ow2.asm:asm:7.1')
+            implementation('org.reactivestreams:reactive-streams:1.0.3')
+            implementation('org.apache.commons:commons-lang3:3.12.0')
+            implementation('org.slf4j:lsf4j-api:1.7.36')
+            implementation("io.qameta.allure:allure-junit5:2.17.3")
+            implementation("io.qameta.allure:allure-junit-platform:2.17.3")
+        }
+    }
+
+    sonarqube {
+        properties {
+            property "sonar.sources", "src/main"
+        }
+    }
+
+    spotless {
+        java {
+            target fileTree('.') {
+                include '**/*.java'
+                exclude '**/build/**', '**/build-*/**', '**/template/**'
+            }
+            toggleOffOn()
+            palantirJavaFormat()
+            removeUnusedImports()
+            trimTrailingWhitespace()
+            endWithNewline()
+
+        }
+    }
+
+    checkstyle {
+        toolVersion '9.3'
+        configFile = rootProject.file("config/checkstyle/checkstyle.xml")
+        configProperties = [
+                'checkstyle.cache.file': "${buildDir}/checkstyle.cache"
+        ]
+    }
+    checkstyleMain {
+        group = 'verification'
+        source = 'src/main/java'
+        configProperties = ['checkstyle.custom.severity': 'warning']
+    }
+    checkstyleTest {
+        group = 'verification'
+        source = 'src/test/java'
+        configProperties = ['checkstyle.custom.severity': 'ignore']
+    }
+
+    java {
+        withJavadocJar()
+        withSourcesJar()
+    }
+
+}
+
+task allDependencies {
+    dependsOn subprojects.collect {"$it.path:dependencies"}
+}
+

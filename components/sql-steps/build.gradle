@@ -1,0 +1,21 @@
+dependencies {
+    testImplementation 'com.oracle.database.jdbc:ojdbc10:19.13.0.0.1'
+    testImplementation 'com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre8'
+    testImplementation 'org.postgresql:postgresql:42.2.19'
+    api 'com.zaxxer:HikariCP:3.4.5'
+    api 'commons-dbutils:commons-dbutils:1.7'
+    api 'org.jooq:jooq:3.13.3'
+    api 'com.google.code.gson:gson:2.8.8'
+    api project(":core:cucumber-core")
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@SQLDemo"
+    }
+}
+task componentTesting(type: Test) {
+    useJUnitPlatform {
+        includeTags '@SqlSteps'
+    }
+}

@@ -1,0 +1,10 @@
+dependencies {
+    api project(":core:cucumber-core")
+    testImplementation project(":plugins:allure-extension")
+}
+
+task cucumber(type: Test) {
+    doFirst {
+        environment "cucumber.filter.tags", "@DebugDemo"
+    }
+}

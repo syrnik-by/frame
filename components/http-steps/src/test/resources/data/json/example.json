@@ -1,0 +1,7 @@
+{
+  "content": {
+    "name" : "${{contextString}}",
+    "value" : "someText"
+  },
+  "id": ${{contextId}}
+}
